@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import style from './navbar.module.css';
-import image from '../../assets/logo.png';
-import Login from '../../components/logins/Login';
-import LogOut from '../../components/logins/LogOut';
+import image from '../../../assets/logo.png';
+import Login from '../logins/Login';
+import LogOut from '../logins/LogOut';
 
 import PropTypes from 'prop-types';
 import { useState } from 'react';

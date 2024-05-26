@@ -3,9 +3,9 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 
-import Header from './components/header/Header';
-import Navbar from './components/navbar/Navbar';
-import CitaContainer from './components/citacontainer/CitaContainer';
+import Header from './components/upperpart/header/Header';
+import Navbar from './components/upperpart/navbar/Navbar';
+import CitaContainer from './components/bodypart/citacontainer/CitaContainer';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);

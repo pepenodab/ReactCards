@@ -108,6 +108,11 @@ p {
   padding-bottom: 0.5rem;
 }
 
+.saved-forms-scroll{
+  overflow: scroll;
+  max-height: 530px;
+}
+
 .w100 {
   width: 60%;
 }

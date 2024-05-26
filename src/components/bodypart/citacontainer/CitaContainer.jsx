@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import style from '../citacontainer/citacontainer.module.css';
+import style from './citacontainer.module.css';
 import { useState } from 'react';
 
 import CitaForm from '../citaform/CitaForm';

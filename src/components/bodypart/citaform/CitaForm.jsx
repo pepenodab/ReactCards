@@ -1,13 +1,19 @@
 /* eslint-disable no-unused-vars */
-import style from '../citacontainer/citacontainer.module.css';
+
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 const CitaForm = ({ addDate }) => {
+
+  const actualDate = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
+  };
+
   const [form, setForm] = useState({
     petName: '',
     ownerPet: '',
-    date: '',
+    date: actualDate(),
     hour: '',
     symptoms: ''
   });
@@ -26,7 +32,7 @@ const CitaForm = ({ addDate }) => {
     setForm({
       petName: '',
       ownerPet: '',
-      date: '',
+      date: actualDate(),
       hour: '',
       symptoms: ''
     });
