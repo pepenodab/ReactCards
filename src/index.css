@@ -1,4 +1,8 @@
 :root {
+  --color-primary: #0b7722;
+  --color-secundary: #fec006;
+  --color-header: #effbee;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,9 +18,103 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+/***************************
+*        Navbar            *
+****************************/
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.me-auto {
+  width: 45rem;
+}
+
+/***************************
+*        Form              *
+****************************/
+
+.form-date {
+  width: 100%;
+  text-align: left;
+  align-items: left;
+  margin-right: 10rem;
+}
+
+.form-content {
+  border: 1px solid blue;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  width: 100%;
+  margin-top: 2rem;
+  align-items: end;
+  height: auto;
+}
+
+.form-title {
+  display: flex;
+  font-size: 2rem;
+  color: var(--color-primary);
+  left: 0;
+}
+
+.form-container {
+  width: 100%;
+  display: inline;
+  text-align: left;
+}
+
+.form-label {
+  width: 90%;
+  left: 0;
+}
+
+.form-input {
+  width: 90%;
+  left: 0;
+}
+
+.form__inputs_date {
+  display: flex;
+  width: 94.8%;
+}
+
+.form__button {
+  background-color: #fbd35c;
+  color: #6b6759;
+  margin-left: -0.05rem;
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.w100 {
+  width: 60%;
+}
+
+button {
+  padding: 0.2rem 0.8rem;
+  border-radius: 7px;
+  border-style: none;
+  margin-left: 0.5rem;
 }

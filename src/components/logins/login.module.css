@@ -1,0 +1,28 @@
+.login__input {
+  margin-left: 0.7rem;
+  width: 10em;
+}
+
+.form_container {
+  position: fixed;
+  margin-left: -45rem;
+  margin-top: -1rem;
+}
+
+.container {
+  display: flex;
+  margin-left: 40%;
+  right: 0;
+  width: 30rem;
+}
+
+.userinformation__p {
+  margin-top: 0.1rem;
+  margin-right: 1rem;
+}
+
+.accept_button {
+  background-color: var(--color-secundary);
+  color: var(--color-primary);
+  margin-right: 1rem;
+}

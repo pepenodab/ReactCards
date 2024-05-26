@@ -1,6 +1,6 @@
 .header {
-  background-color: #effbee;
-  color: #0f7e2c;
+  background-color: var(--color-header);
+  color: var(--color-primary);
   width: 100%;
   position: fixed;
   top: 0;

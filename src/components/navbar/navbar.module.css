@@ -1,0 +1,19 @@
+.navbar__wrapper {
+  background-color: #0b7722;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  margin-top: 3.4rem;
+  color: white;
+}
+
+.create__button {
+  background-color: var(--color-secundary);
+  color: var(--color-primary);
+}
+
+.signin__button {
+  background-color: var(--color-primary);
+  color: white;
+  border: white solid 1px;
+}
