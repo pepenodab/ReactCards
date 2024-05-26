@@ -6,6 +6,9 @@ import style from './login.module.css';
 const Login = ({ setUsername, setIsLogin }) => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [alert, setAlert] = useState(false);
+
+  const showOffAlert = () => setAlert(false);
 
   const sendSubmit = (e) => {
     e.preventDefault();
@@ -13,8 +16,9 @@ const Login = ({ setUsername, setIsLogin }) => {
     if (password == 123) {
       setUsername(name);
       setIsLogin(true);
+      setAlert(false);
     } else {
-      window.alert('no funciona :( ' + name);
+      setAlert(true);
       setName('');
       setPassword('');
     }
@@ -47,7 +51,14 @@ const Login = ({ setUsername, setIsLogin }) => {
             <button type="submit" className={style.accept_button}>
               <b>Aceptar</b>
             </button>
+            
           </div>
+          {alert && (
+              <div className='login-alert'>
+                <p>Usuario o contraseña incorrectos</p>
+                <button className='alert-exit' onClick={showOffAlert}>x</button>
+              </div>
+            )}
         </form>
       </div>
     </>

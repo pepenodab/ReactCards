@@ -12,17 +12,15 @@ const Cita = ({ date, removeDate }) => {
           <div className="card card-title">
             {date.petName}
             <hr />
-          </div>
-          <p htmlFor="ownerPet">Dueño : {date.ownerPet}</p>
-          <div className="times">
-            <p>Fecha: {date.date}</p>
-            <p>Hora: {date.hour}</p>
-          </div>
-          <div className="card card-text">
+            <div className='card-text'>Dueño : {date.ownerPet}</div>
+            <div className="times">
+              <p>Fecha: {date.date}</p>
+              <p>Hora: {date.hour}</p>
+            </div>
             <label htmlFor="symptoms">Sintomas:</label>
             <p>{date.symptoms}</p>
+            <button onClick={handleRemove}>Eliminar</button>
           </div>
-          <button onClick={handleRemove}>Eliminar</button>
         </div>
       </div>
     </>
