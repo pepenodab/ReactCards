@@ -1,0 +1,41 @@
+.button_card {
+  width: 9.5rem;
+  background-color: #e44c3c;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.card_title {
+  padding-top: 0.3rem;
+  padding-left: 1rem;
+  text-align: left;
+  padding-bottom: 0.7rem;
+  background-color: #f6f6f7;
+}
+
+.card_body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+}
+
+.card_times {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hr_correct {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.h2_color {
+  color: var(--color-primary);
+  margin-top: 2.5rem;
+}

@@ -3,7 +3,50 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
+/**
+ * const CitaForm = ({addDate}): This component show a form to create a new date
+ *
+ * ***************************************************************
+ *                           PARAMETERS
+ * ***************************************************************
+ *
+ * @param addDate: It's a function to add a new date into the array
+ *
+ * ***************************************************************
+ *                           RETURNS
+ * ***************************************************************
+ *
+ * @returns: A form with a fews inputs to create a new date
+ *
+ */
+
 const CitaForm = ({ addDate }) => {
+  /**
+   * const actualHour = (): This function return the actual hour and minutes of the computer
+   *
+   * ***************************************************************
+   *                           RETURNS
+   * ***************************************************************
+   *
+   * @returns: A string that containt the hour and minutes of the local computer
+   *
+   */
+
+  const actualHour = () => {
+    const now = new Date();
+    return `${now.getHours().toString()}:${now.getMinutes().toString()}`;
+  };
+
+  /**
+   * const actualDate = (): This function return the actual year, month and day
+   *
+   * ***************************************************************
+   *                           RETURNS
+   * ***************************************************************
+   *
+   * @returns: A string that containt the year, month and day of the local computer
+   *
+   */
 
   const actualDate = () => {
     const now = new Date();
@@ -14,9 +57,21 @@ const CitaForm = ({ addDate }) => {
     petName: '',
     ownerPet: '',
     date: actualDate(),
-    hour: '',
+    hour: actualHour(),
     symptoms: ''
   });
+
+  /**
+   * const handleInputChange = (e): It's a  function is a common way to handle user input changes within React forms.
+   *
+   * ***************************************************************
+   *                           PARAMETERS
+   * ***************************************************************
+   *
+   * @param e: It's the event of the element you click
+   *
+   *
+   */
 
   const handleInputChange = (e) => {
     setForm({
@@ -26,6 +81,17 @@ const CitaForm = ({ addDate }) => {
     });
   };
 
+  /**
+   * const sendForm = (e): It's a  function to update new form into the array and init the form
+   *
+   * ***************************************************************
+   *                           PARAMETERS
+   * ***************************************************************
+   *
+   * @param e: It's the event of the element you click
+   *
+   */
+
   const sendForm = (e) => {
     e.preventDefault();
     addDate(form);
@@ -33,16 +99,17 @@ const CitaForm = ({ addDate }) => {
       petName: '',
       ownerPet: '',
       date: actualDate(),
-      hour: '',
+      hour: actualHour(),
       symptoms: ''
     });
   };
+
   return (
     <>
       <div className="form">
         <div className="form-content">
           <h1 className="form-title">Añadir cita</h1>
-          <hr />
+          <hr className="hr-format" />
           <form onSubmit={sendForm} className="form-date">
             <div className="form-container">
               <label htmlFor="petName" className="form-label">

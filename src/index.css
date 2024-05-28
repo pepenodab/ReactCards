@@ -54,10 +54,10 @@ p {
 *       Login             *
 ***************************/
 
-.login-alert {
+.login__alert {
   border-radius: 5px;
   display: flex;
-  
+
   background-color: #e44c3c;
   width: 320px;
   height: 30px;
@@ -69,11 +69,10 @@ p {
   margin-left: 20rem;
 }
 
-.alert-exit {
+.alert__exit {
   background-color: #e44c3c;
   margin-left: 1rem;
 }
-
 
 /***************************
 *        Form              *
@@ -87,13 +86,16 @@ p {
 }
 
 .form-content {
-  border: 1px solid blue;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   align-items: end;
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  transform: scale(1.1);
 }
 
 .form-title {
@@ -116,7 +118,11 @@ p {
 
 .form-input {
   width: 90%;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
   left: 0;
+  color: black;
 }
 
 .form__inputs_date {
@@ -133,13 +139,41 @@ p {
   padding-bottom: 0.5rem;
 }
 
-.saved-forms-scroll{
-  overflow: scroll;
-  max-height: 530px;
+/*******************
+*     CARD
+*******************/
+
+.card {
+  width: 500px;
+}
+
+.card-title {
+  margin: 0;
+  width: 500px;
+}
+
+.card .card-body {
+  border: none;
+  padding: 0;
+  width: 500px;
+}
+
+.saved-forms-scroll {
+  overflow-y: scroll;
+  max-height: 490px;
+  max-width: 520px;
 }
 
 .w100 {
   width: 60%;
+}
+
+.hr-format {
+  width: 30rem;
+}
+
+.mr-1 {
+  margin-right: 0.3rem;
 }
 
 button {

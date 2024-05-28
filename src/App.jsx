@@ -3,23 +3,29 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 
-import Header from './components/upperpart/header/Header';
-import Navbar from './components/upperpart/navbar/Navbar';
-import CitaContainer from './components/bodypart/citacontainer/CitaContainer';
+import Header from './components/Visual/Header/Header';
+import Navbar from './components/Visual/Navbar/Navbar';
+import CitaContainer from './components/Citas/Citacontainer/CitaContainer';
+
+/**
+ * function App(): It brings all the fundamental components, so that the page can work.
+ * Where we find the variables “isLogin” to control if the user is logged in.
+ *
+ * ***************************************************************
+ *                           RETURNS
+ * ***************************************************************
+ *
+ *  @returns: The three essentials componentes Header, Navbar and CitaContainer
+ *
+ */
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
-  const [username, setUsername] = useState('');
 
   return (
     <>
       <Header title={'Administrador de Pacientes de Veterinaría'}></Header>
-      <Navbar
-        setUsername={setUsername}
-        setIsLogin={setIsLogin}
-        username={username}
-        isLogin={isLogin}
-      ></Navbar>
+      <Navbar setIsLogin={setIsLogin} isLogin={isLogin}></Navbar>
 
       <main>
         <CitaContainer isLogin={isLogin}></CitaContainer>
